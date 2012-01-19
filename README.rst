@@ -9,7 +9,9 @@ Dependancies
 
 Sample Usage
 ------------
+
 ::
+
     from indesign_server.client import InDesignServerClient
     wsdl = "http://myserver.com/service?wsdl"
     client = InDesignServerClient(wsdl)
