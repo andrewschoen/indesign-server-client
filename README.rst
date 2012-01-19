@@ -21,8 +21,14 @@ Sample Usage
 Notes
 -----
 The version of InDesign server I'm using (CS5.5) did not provide the correct endpoint in the
-generated wsdl file.  You can use the `host` argument of `InDesignServerClient` to set the
+generated wsdl file.  You can use the ``host`` argument of ``InDesignServerClient`` to set the
 correct endpoint.
 
 Also, timeout errors are common because InDesign server sometimes performs long running tasks.
-Set the `timeout` argument of `InDesignServerClient` to compensate.
+Set the ``timeout`` argument of ``InDesignServerClient`` to compensate.
+
+::
+
+    from indesign_server.client import InDesignServerClient
+    wsdl = "http://myserver.com/service?wsdl"
+    client = InDesignServerClient(wsdl, host="http://myserver.com", timeout=500)
